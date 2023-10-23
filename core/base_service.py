@@ -38,7 +38,7 @@ class ChatService:
         vectordb = Chroma.from_documents(documents=texts,
                                         #  embedding=self.embeddings,
                                         embedding=self.embedding_function,
-                                         persist_directory=self.persist_directory)
+                                        persist_directory=self.persist_directory)
         vectordb.persist()
 
     def query_document(self, prompt):
@@ -48,13 +48,13 @@ class ChatService:
             # embedding_function=self.embeddings
             embedding_function=self.embedding_function
         )
-        retriever = vectordb_cont.as_retriever(search_kwargs={"k": 3})
+        retriever = vectordb_cont.as_retriever(search_kwargs={"k": 1})
         llm = ChatOpenAI(model_name='gpt-3.5-turbo')
         qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever)
 
         if prompt:
-            query = f"###Prompt {prompt}"
-            llm_response = qa(query)
+            prompt = f"###Prompt {prompt}"
+            llm_response = qa(prompt)
             return llm_response["result"]
         else:
             return []
