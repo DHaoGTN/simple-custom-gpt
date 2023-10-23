@@ -1,5 +1,5 @@
 from langchain.document_loaders import PyPDFLoader
-from core.base_service import ChatService
+from chat.base_service import ChatService
 
 
 class PDFService(ChatService):

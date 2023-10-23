@@ -1,6 +1,6 @@
 from langchain.document_loaders import TextLoader
 
-from core.base_service import ChatService
+from chat.base_service import ChatService
 
 
 class TextService(ChatService):
