@@ -25,7 +25,9 @@ cht_mdl = DocService(data_path, persist_directory=os.path.join(HOME, "chroma_sto
 cht_mdl.fetch_document()
 cht_mdl.create_vector_index()
 
+buffer, summary_buffer = cht_mdl.get_buffer()
+
 while True:
-    query = input("input the text here: ")
-    output = cht_mdl.query_document(prompt=query)
+    prompt = input("input the text here: ")
+    output = cht_mdl.query_document(prompt, buffer, summary_buffer)
     print(output)
