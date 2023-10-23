@@ -1,4 +1,3 @@
-[![langchain-chat-vector-db](https://github.com/olahsymbo/langchain-chat-vector-db/actions/workflows/langchain-vector-ci.yaml/badge.svg)](https://github.com/olahsymbo/langchain-chat-vector-db/actions/workflows/langchain-vector-ci.yaml)
 
 # Langchain-Chat-Vector-DB
 
@@ -17,13 +16,13 @@ This is a project that enables users to interact with their documents (PDF, DOCX
 1. Clone the project repository:
 
 ```
-git clone https://github.com/olahsymbo/langchain-chat-vector-db.git
+git clone https://github.com/DHaoGTN/simple-custom-gpt
 ```
 
 2. Change into the project directory:
 
 ```
-cd langchain-chat-vector-db
+cd simple-custom-gpt
 ```
 
 3. Install the required dependencies:
@@ -43,4 +42,4 @@ python app.py
 
 The chatbot's behavior can be configured by creating a `.env` file. Here are some key configuration options:
 
-**OPENAI_API_KEY:** Your OpenAI API key. Get it from the OpenAI developer dashboard (https://platform.openai.com).
+**OPENAI_KEY:** Your OpenAI API key. Get it from the OpenAI developer dashboard (https://platform.openai.com).
